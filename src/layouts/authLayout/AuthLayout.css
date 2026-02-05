@@ -1,0 +1,44 @@
+.auth-layout {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0f1729;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  padding: 40px 20px;
+  position: relative;
+}
+
+/* Subtle gradient overlay */
+.auth-layout::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse at center, transparent 0%, rgba(15, 23, 41, 0.5) 100%);
+  pointer-events: none;
+}
+
+.auth-container {
+  width: 100%;
+  max-width: 460px;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive */
+@media (max-width: 520px) {
+  .auth-container {
+    padding: 32px 24px;
+    margin: 0 16px;
+  }
+}
